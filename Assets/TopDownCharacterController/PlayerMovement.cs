@@ -85,15 +85,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Run(bool isRunning)
     {
+        animator.SetBool("IsRunning", isRunning);
         if (isRunning)
         {
             moveSpeed = runSpeed;
-            animator.speed *= 1.5f;
         }
         else
         {
             moveSpeed = 5.0f;
-            animator.speed = 1f;
         }
     }
 }
